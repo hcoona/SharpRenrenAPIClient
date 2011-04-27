@@ -1,22 +1,22 @@
-´úÂë·ç¸ñÊ¹ÓÃReSharper¿ØÖÆ
-Renren.APIÒÀÀµÓÚRestSharp£¬¶øRestSharpÒÀÀµÓÚJson.Net
+ï»¿ä»£ç é£æ ¼ä½¿ç”¨ReSharperæ§åˆ¶
+Renren.APIä¾èµ–äºRestSharpï¼Œè€ŒRestSharpä¾èµ–äºJson.Net
 
-×¢Òâ²»ÒªÔÚĞŞ¸Ä´úÂëµÄ¹ı³ÌÖĞ½«Ãô¸ĞĞÅÏ¢Ìá½»µ½°æ±¾¿ØÖÆÏµÍ³ÖĞ£¬²»È»¾ÍÄ¨²»µôÕâĞ©ĞÅÏ¢ÁË¡­¡­
+æ³¨æ„ä¸è¦åœ¨ä¿®æ”¹ä»£ç çš„è¿‡ç¨‹ä¸­å°†æ•æ„Ÿä¿¡æ¯æäº¤åˆ°ç‰ˆæœ¬æ§åˆ¶ç³»ç»Ÿä¸­ï¼Œä¸ç„¶å°±æŠ¹ä¸æ‰è¿™äº›ä¿¡æ¯äº†â€¦â€¦
 
-Ê¹ÓÃ·½·¨£º
-Ê×ÏÈ°´ÕÕhttp://wiki.dev.renren.com/wiki/AuthenticationÖĞ
-¡¶¿ìËÙÉÏÊÖ¡·ºÍ¡¶Ó¦ÓÃ³¡¾°¡·ÖĞµÄÊµÀıÖĞµÄ·½·¨»ñµÃAccessToken
+ä½¿ç”¨æ–¹æ³•ï¼š
+é¦–å…ˆæŒ‰ç…§http://wiki.dev.renren.com/wiki/Authenticationä¸­
+ã€Šå¿«é€Ÿä¸Šæ‰‹ã€‹å’Œã€Šåº”ç”¨åœºæ™¯ã€‹ä¸­çš„å®ä¾‹ä¸­çš„æ–¹æ³•è·å¾—AccessToken
 
-Ê¹ÓÃRenrenClientÊ±£¬Ğë½«API_KEY, API_SECRETºÍAccess_Token×÷Îª²ÎÊı´«µİ¸ø¹¹Ôìº¯Êı¡£
-Ö®ºóRenrenClient»áÊ¹ÓÃAccessTokenÀ´»ñÈ¡Session_Key
+ä½¿ç”¨RenrenClientæ—¶ï¼Œé¡»å°†API_KEY, API_SECRETå’ŒAccess_Tokenä½œä¸ºå‚æ•°ä¼ é€’ç»™æ„é€ å‡½æ•°ã€‚
+ä¹‹åRenrenClientä¼šä½¿ç”¨AccessTokenæ¥è·å–Session_Key
 
-×¢Òâ£º»ñÈ¡µÄAccess_TokenºÍSession_KeyÊµ¼ÊÉÏ¶¼ÓĞÒ»¸öExpiresInµÄ¹ıÆÚÊ±¼ä£¬ÔÚ´Ë¿âÖĞÄ¿Ç°¶¼Ã»ÓĞ¿¼ÂÇ¡£
+æ³¨æ„ï¼šè·å–çš„Access_Tokenå’ŒSession_Keyå®é™…ä¸Šéƒ½æœ‰ä¸€ä¸ªExpiresInçš„è¿‡æœŸæ—¶é—´ï¼Œåœ¨æ­¤åº“ä¸­ç›®å‰éƒ½æ²¡æœ‰è€ƒè™‘ã€‚
 
-Ä¿Ç°´Ë¿â½öÊµÏÖÁËfriends.getFriends½Ó¿Ú¡£
-£¨http://wiki.dev.renren.com/wiki/Friends.getFriends£©
-¶ÔÓ¦µÄRequestÎªGetFriendsRequestÀà£¬²éÑ¯½á¹û¶ÔÓ¦×ÅList<FriendInfoEntity>
+ç›®å‰æ­¤åº“ä»…å®ç°äº†friends.getFriendsæ¥å£ã€‚
+ï¼ˆhttp://wiki.dev.renren.com/wiki/Friends.getFriendsï¼‰
+å¯¹åº”çš„Requestä¸ºGetFriendsRequestç±»ï¼ŒæŸ¥è¯¢ç»“æœå¯¹åº”ç€List<FriendInfoEntity>
 
-Ê¹ÓÃÊ±£¬½«¹¹ÔìºÃµÄGetFriendsRequest´«µİ¸øRenrenClientµÄQuery·½·¨£¬
-½«²éÑ¯½á¹ûµÄÀàĞÍ´«µİ¸øQuery·½·¨µÄ·ºĞÍ²ÎÊı£¬¼´¿ÉÍê³É²éÑ¯¡£
+ä½¿ç”¨æ—¶ï¼Œå°†æ„é€ å¥½çš„GetFriendsRequestä¼ é€’ç»™RenrenClientçš„Queryæ–¹æ³•ï¼Œ
+å°†æŸ¥è¯¢ç»“æœçš„ç±»å‹ä¼ é€’ç»™Queryæ–¹æ³•çš„æ³›å‹å‚æ•°ï¼Œå³å¯å®ŒæˆæŸ¥è¯¢ã€‚
 
-ÔÚ¼ÌĞø¿ª·¢´Ë¿âÊ±£¬Ó¦¸Ã×ñÑ­´ËÄ£Ê½½øĞĞ¿ª·¢¡£
+åœ¨ç»§ç»­å¼€å‘æ­¤åº“æ—¶ï¼Œåº”è¯¥éµå¾ªæ­¤æ¨¡å¼è¿›è¡Œå¼€å‘ã€‚
