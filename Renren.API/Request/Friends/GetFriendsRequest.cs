@@ -2,9 +2,9 @@
  * 
  * http://wiki.dev.renren.com/wiki/Friends.getFriends
  * 
- */
+ ***********************/
 
-namespace Renren.API.Request
+namespace Renren.API.Request.Friends
 {
     public class GetFriendsRequest : RenrenRequestBase
     {
