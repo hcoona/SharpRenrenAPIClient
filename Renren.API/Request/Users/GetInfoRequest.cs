@@ -12,6 +12,7 @@ namespace Renren.API.Request.Users
 {
     public class GetInfoRequest : RenrenRequestBase
     {
+        private const string UIDS_PARAM_NAME = "uids";
         private const string FIELDS_PARAM_NAME = "fields";
         private const string SESSION_KEY_PARAM_NAME = "session_key";
 
@@ -20,12 +21,18 @@ namespace Renren.API.Request.Users
             get { return "users.getInfo"; }
         }
 
-        public GetInfoRequest(string sessionKey, FieldsFlag fields = FieldsFlag.Default)
+        // Session Key is optional parameter
+        // Session Key could be obtained from RenrenClient
+        public GetInfoRequest(int userId, string sessionKey, FieldsFlag fields = FieldsFlag.Default)
         {
-            AddParameter(SESSION_KEY_PARAM_NAME, sessionKey);
+            AddParameter(UIDS_PARAM_NAME, userId);
 
             var fieldsParamValue = BuildFieldsParamValue(fields);
             AddParameter(FIELDS_PARAM_NAME, fieldsParamValue);
+
+            //optional
+            if (!string.IsNullOrEmpty(sessionKey))
+                AddParameter(SESSION_KEY_PARAM_NAME, sessionKey);
         }
 
         private static string BuildFieldsParamValue(FieldsFlag fields)
@@ -33,6 +40,8 @@ namespace Renren.API.Request.Users
             var sb = new StringBuilder();
             foreach (var name in Enum.GetNames(typeof(FieldsFlag)))
             {
+                if (name == "Default") continue;
+
                 var f = (FieldsFlag)Enum.Parse(typeof(FieldsFlag), name);
                 if ((f & fields) != 0) sb.AppendFormat("{0},", FieldsEnumStringMapper[f]);
             }
@@ -44,7 +53,8 @@ namespace Renren.API.Request.Users
         {
             foreach (var name in Enum.GetNames(typeof(FieldsFlag)))
             {
-                FieldsEnumStringMapper.Add((FieldsFlag)Enum.Parse(typeof(FieldsFlag), name), name.ToLower());
+                if (name != "Default")
+                    FieldsEnumStringMapper.Add((FieldsFlag)Enum.Parse(typeof(FieldsFlag), name), name.ToLower());
             }
             FieldsEnumStringMapper[FieldsFlag.EmailHash] = "email_hash";
             FieldsEnumStringMapper[FieldsFlag.HomeTownLocation] = "hometown_location";

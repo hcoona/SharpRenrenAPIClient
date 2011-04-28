@@ -36,8 +36,9 @@
     <Compile Include="RenrenClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\SessionKeyResponseEntity.cs" />
-    <Compile Include="Request\GetFriendsRequest.cs" />
+    <Compile Include="Request\Friends\GetFriendsRequest.cs" />
     <Compile Include="Request\RenrenRequestBase.cs" />
+    <Compile Include="Request\Users\GetInfoRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json.Net35">

@@ -8,6 +8,8 @@ namespace Renren.API.Request.Friends
 {
     public class GetFriendsRequest : RenrenRequestBase
     {
+        private const string SESSION_KEY_PARAM_NAME = "session_key";
+
         private const string PAGE_PARAM_NAME = "page";
         private const string COUNT_PARAM_NAME = "count";
 
@@ -16,8 +18,11 @@ namespace Renren.API.Request.Friends
             get { return "friends.getFriends"; }
         }
 
-        public GetFriendsRequest(int page = 0, int count = 500)
+        public GetFriendsRequest(string sessionKey, int page = 0, int count = 500)
         {
+            AddParameter(SESSION_KEY_PARAM_NAME, sessionKey);
+
+            //optional
             AddParameter(PAGE_PARAM_NAME, page);
             AddParameter(COUNT_PARAM_NAME, count);
         }

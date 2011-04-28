@@ -43,7 +43,6 @@ namespace Renren.API
         }
 
         private const string API_KEY_PARAM_NAME = "api_key";
-        private const string SESSION_KEY_PARAM_NAME = "session_key";
 
         private const string FORMAT_PARAM_NAME = "format";
         private const string FORMAT_PARAM_JSON_VALUE = "JSON";
@@ -70,7 +69,6 @@ namespace Renren.API
         private string QueryHelper(RestRequest request, string format)
         {
             request.AddParameter(API_KEY_PARAM_NAME, apiKey);
-            request.AddParameter(SESSION_KEY_PARAM_NAME, SessionKey);
             request.AddParameter(FORMAT_PARAM_NAME, format);
 
             // 附加验证签名，详情见
