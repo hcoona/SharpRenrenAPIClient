@@ -58,8 +58,10 @@ namespace Renren.API.Request.Users
             }
             FieldsEnumStringMapper[FieldsFlag.EmailHash] = "email_hash";
             FieldsEnumStringMapper[FieldsFlag.HomeTownLocation] = "hometown_location";
-            FieldsEnumStringMapper[FieldsFlag.WorkInfo] = "work_info";
-            FieldsEnumStringMapper[FieldsFlag.UniversityInfo] = "unifersity_info";
+            FieldsEnumStringMapper[FieldsFlag.WorkHistory] = "work_history";
+            FieldsEnumStringMapper[FieldsFlag.UniversityHistory] = "university_history";
+            FieldsEnumStringMapper[FieldsFlag.HighSchoolHistory] = "hs_history";
+            FieldsEnumStringMapper[FieldsFlag.ContactInfo] = "contact_info";
         }
     }
 
@@ -84,8 +86,10 @@ namespace Renren.API.Request.Users
         HeadUrl = 512,
         MainUrl = 1024,
         HomeTownLocation = 2048,
-        WorkInfo = 4096,
-        UniversityInfo = 8192,
+        WorkHistory = 4096,
+        UniversityHistory = 8192,
+        HighSchoolHistory = 16384,
+        ContactInfo = 32768,
         Default = Uid | Name | TinyUrl | HeadUrl | ZiDou | Star
     }
 }
