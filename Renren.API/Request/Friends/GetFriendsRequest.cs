@@ -6,6 +6,7 @@
 
 namespace Renren.API.Request.Friends
 {
+    // 其返回值对应着List<FriendInfoEntity>
     public class GetFriendsRequest : RenrenRequestBase
     {
         private const string SESSION_KEY_PARAM_NAME = "session_key";

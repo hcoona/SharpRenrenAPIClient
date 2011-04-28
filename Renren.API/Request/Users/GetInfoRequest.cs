@@ -10,6 +10,10 @@ using System.Text;
 
 namespace Renren.API.Request.Users
 {
+    // 注意！
+    // 其返回值对应着List<UserInfoEntity>
+    // 虽然只有一个对象在list之中，但是必须得用List接收返回值
+    // 可以用Single方法来得到其唯一的元素
     public class GetInfoRequest : RenrenRequestBase
     {
         private const string UIDS_PARAM_NAME = "uids";
@@ -40,7 +44,7 @@ namespace Renren.API.Request.Users
             var sb = new StringBuilder();
             foreach (var name in Enum.GetNames(typeof(FieldsFlag)))
             {
-                if (name == "Default") continue;
+                if (name == "Default" || name == "All") continue;
 
                 var f = (FieldsFlag)Enum.Parse(typeof(FieldsFlag), name);
                 if ((f & fields) != 0) sb.AppendFormat("{0},", FieldsEnumStringMapper[f]);
@@ -53,7 +57,7 @@ namespace Renren.API.Request.Users
         {
             foreach (var name in Enum.GetNames(typeof(FieldsFlag)))
             {
-                if (name != "Default")
+                if (name != "Default" && name != "All")
                     FieldsEnumStringMapper.Add((FieldsFlag)Enum.Parse(typeof(FieldsFlag), name), name.ToLower());
             }
             FieldsEnumStringMapper[FieldsFlag.EmailHash] = "email_hash";
@@ -90,6 +94,7 @@ namespace Renren.API.Request.Users
         UniversityHistory = 8192,
         HighSchoolHistory = 16384,
         ContactInfo = 32768,
-        Default = Uid | Name | TinyUrl | HeadUrl | ZiDou | Star
+        Default = Uid | Name | TinyUrl | HeadUrl | ZiDou | Star,
+        All = 65535 // Cheat for all mask.
     }
 }

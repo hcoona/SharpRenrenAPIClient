@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Entity\FriendInfoEntity.cs" />
+    <Compile Include="Entity\UserInfoEntity.cs" />
     <Compile Include="RenrenClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\SessionKeyResponseEntity.cs" />
