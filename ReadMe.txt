@@ -1,4 +1,6 @@
-﻿代码风格使用ReSharper控制
+*Deprecated*
+
+代码风格使用ReSharper控制
 Renren.API依赖于RestSharp，而RestSharp依赖于Json.Net
 
 注意不要在修改代码的过程中将敏感信息提交到版本控制系统中，不然就抹不掉这些信息了……
